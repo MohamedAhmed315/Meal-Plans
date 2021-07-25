@@ -39,7 +39,20 @@ html {
 .fa-shopping-cart {
     color: #649483;
     padding: 5px 5px;
+}
 
+@media only screen and (max-width: 1199px) {
+    .nav-btn {
+        width: 150px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 783px) {
+    .nav-btn {
+        width: 120px;
+        font-size: 10px;
+    }
 }
 
 /**************************/
@@ -122,13 +135,13 @@ img#main-dish {
     font-weight: 500;
 }
 
-#learnMore-btn {
+.learnMore-btn {
     color: #649483;
     background-color: #fff;
     border: solid 2px #649483;
 }
 
-#learnMore-btn:hover {
+.learnMore-btn:hover {
     color: black;
     transition: 0.5s;
 }
@@ -168,7 +181,6 @@ img#main-dish {
     transform: rotate(-180deg);
     writing-mode: vertical-rl;
     float: left;
-    /* margin-top: 100px; */
     color: white;
 }
 
@@ -190,7 +202,6 @@ img#main-dish {
 
     #home-right {
         text-align: left;
-        /* align-content: space-around; */
     }
 }
 
@@ -202,17 +213,17 @@ img#main-dish {
 }
 
 @media only screen and (max-width: 412px) {
-    #journey-btn {
+    .journey-btn {
         margin-bottom: 10px;
     }
 }
 
 @media only screen and (max-width: 825px) {
-    #journey-btn {
+    #home .journey-btn {
         margin-top: 5px;
     }
 
-    #learnMore-btn {
+    #home .learnMore-btn {
         margin-top: 5px;
     }
 
@@ -388,8 +399,7 @@ img#main-dish {
     background-position: right;
     background-size: 1000px;
     background-repeat: no-repeat;
-    padding-top: 150px;
-    /* margin-bottom: 150px; */
+    padding-top: 100px;
 }
 
 #love h1 {
@@ -406,6 +416,26 @@ img#main-dish {
     width: 100%;
     box-shadow: 0px 30px 50px #cfbfb5;
     border-radius: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+    #love h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+    #love-btn-container {
+        text-align: center;
+    }
+
+    #love .learnMore-btn {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #love .journey-btn {
+        margin-bottom: 5px;
+    }
 }
 
 /* ************************ say ******************************* */
