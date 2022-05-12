@@ -24,10 +24,26 @@
         integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
+    <!-- lottie -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script>
+
+    <!-- recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script type="text/javascript">
+        var onloadCallback = function () {
+            grecaptcha.render('html_element', {
+                'sitekey': 'your_site_key'
+            });
+        };
+    </script> -->
+
     <!-- icon, title, custom css -->
     <title>CHEF NORMAN MEALS</title>
     <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style-minified.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -40,7 +56,6 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item px-lg-3 px-md-1">
@@ -56,16 +71,13 @@
                     <a class="nav-link" href="#">Contact Us</a>
                 </li>
             </ul>
-
             <button class="btn main-btn nav-btn">Order Your Meal</button>
-
             <div class="search-container">
                 <input type="text" name="search" placeholder="Search..." class="search-input">
                 <a href="#" class="search-btn">
                     <i class="fas fa-search"></i>
                 </a>
             </div>
-
             <i class="fas fa-shopping-cart"></i>
         </div>
     </nav>
@@ -75,33 +87,31 @@
     <div id="home" class="container-fluid">
         <div class="row">
             <div id="img-col" class="col-md-6">
-                <img class="wow animate__animated animate__rollIn" id="main-dish" src="img/home-dish.png"
-                    alt="main dish">
+                <img class="" id="main-dish" src="img/home-dish.png" alt="main dish">
+                <!-- wow animate__animated animate__rollIn -->
+
+
                 <div id="main-dish-caption" class="wow animate__animated animate__slideInUp">
                     <h6>SMOKED MILKFISH GARDEN SALAD</h6>
                     <p>Includes: Vegetable Lasagna, Fresh Fruit Platter,<br> Fresh Lemon Juice, and Creme Brulee </p>
                 </div>
-
             </div>
             <div id="home-right" class="col-md-6 align-content-lg-start align-content-md-center">
                 <h1 class="wow animate__animated animate__bounceInDown animate__delay-1s">Worry-Free<br>Meal Plans.</h1>
                 <button
-                    class="btn main-btn journey-btn wow animate__animated animate__fadeInRight animate__delay-1s">START YOUR
+                    class="btn main-btn journey-btn wow animate__animated animate__fadeInRight animate__delay-1s">START
+                    YOUR
                     JOURNEY</button>
                 <button
                     class="btn main-btn learnMore-btn wow animate__animated animate__fadeInRight animate__delay-1s">LEARN
                     MORE</button>
-
-                <!-- needs improvements -->
-
                 <div id="home-menu" class="p-4 mt-4 wow animate__animated animate__bounceInDown">
-
                     <div class="row">
-
                         <div class="col-sm-6 col-xl-3">
                             <!-- <h5>MEAL OPTIONS</h5> -->
                             <img class="menu-img img1" src="./img/home-menu/menu-1.png" alt="menu1">
-                            <p class="caption">Pomegranate<br> Glazed Salmon</p>
+                            <p class="caption" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                                Pomegranate<br> Glazed Salmon</p>
                         </div>
                         <div class="col-sm-6 col-xl-3">
                             <img class="menu-img" src="./img/home-menu/menu-2.png" alt="menu1">
@@ -116,10 +126,10 @@
                             <img class="menu-img" style="float: right; margin-top: 30px; width: 30%;"
                                 src="img/Arrow.png" alt="" srcset="">
                             <p class="caption">Pomegranate Pear<br> Green Salad w/ Dressing</p>
-
                         </div>
                     </div>
                 </div>
+                <!-- <lottie-player id="lottie-player" src="76786-halloween-jumping-pumpkin.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" autoplay></lottie-player> -->
             </div>
         </div>
     </div>
@@ -128,10 +138,10 @@
 
     <div id="favorites">
         <div class="container pt-5 pb-5">
-            <h1 class="text-lg-left wow animate__animated animate__slideInLeft" data-wow-delay="0.25s">Our Favorites
+            <h1 class="text-lg-left wow " data-wow-delay="0.25s">Our Favorites
             </h1>
-            <h6 class="text-lg-left mb-5 wow animate__animated animate__slideInLeft">MEALS THAT OUR CUSTOMERS ENJOY</h6>
-
+            <!-- animate__animated animate__slideInLeft -->
+            <h6 class="text-lg-left mb-5 wow ">MEALS THAT OUR CUSTOMERS ENJOY</h6>
             <div class="row text-center m-auto ">
                 <div class="fav-card col mb-3 wow animate__animated animate__slideInLeft">
                     <h5 class="font-weight-bold">Pomegranate<br> Glazed Salmon</h5>
@@ -182,8 +192,6 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="row recipes ">
                 <div class="col-md-6 plan-text">
                     <h6>SMOKED MILKFISH GARDEN SALAD</h6>
@@ -239,7 +247,6 @@
                     <img src="img/process/process-1.png" alt="">
                     <h5>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit</h5>
                 </div>
-
                 <img class="process-arrow" src="img/Arrow.png" alt="arrow" srcset="">
                 <div class="process-card col-md mb-3 wow animate__animated animate__zoomIn">
                     <h5 class="font-weight-bold">Ready To Checkout</h5>
@@ -256,28 +263,23 @@
         </div>
     </div>
 
-
     <!-- -------------------------- meals love -------------------------- -->
 
     <div id="love">
         <div class="container mb-5">
             <div class="row">
-
                 <div id="love-text" class="col-md-6 mb-5">
                     <h1 class="wow animate__animated animate__backInDown">Meal Plans<br>You Love</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
                         maecenas accumsan lacus vel facilisis.</p>
                     <div id="love-btn-container">
-                        <button
-                            class="btn main-btn journey-btn wow animate__animated animate__fadeInLeft">START YOUR
+                        <button class="btn main-btn journey-btn wow animate__animated animate__fadeInLeft">START YOUR
                             JOURNEY</button>
                         <button class="btn main-btn learnMore-btn wow animate__animated animate__fadeInLeft">LEARN
                             MORE</button>
                     </div>
-
                 </div>
-
                 <div class="col-md-6 mb-5">
                     <div id="carousel" class="carousel slide wow animate__animated animate__fadeInRight"
                         data-ride="carousel">
@@ -332,7 +334,6 @@
                             incididunt
                             ut labore.</h5>
                     </div>
-
                     <div class="say-card col-md mb-3 wow animate__animated animate__zoomIn">
                         <img src="img/say/say-2.png" alt="">
                         <h5 class="font-weight-bold">ZEPHYR CONSTANTINE</h5>
@@ -340,7 +341,6 @@
                             incididunt
                             ut labore.</h5>
                     </div>
-
                     <div class="say-card col-md mb-3 wow animate__animated animate__slideInRight">
                         <img src="img/say/say-3.png" alt="">
                         <h5 class="font-weight-bold">HALEY CORDONE</h5>
@@ -414,21 +414,19 @@
                         </form>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
-
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.63975727011!2d31.24539831495604!3d29.961038981912758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847ee8cff2175%3A0x9b3848074b530079!2s5th%20Dimension%20-%205d!5e0!3m2!1sen!2seg!4v1626604935555!5m2!1sen!2seg"
-                            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
                     </div>
-                    <!-- <div class="col-md-3"></div> -->
-
                     <div class="col-lg-6 col-md-12  text-center">
                         <h6>Copyright 2021 Chef Norman Meals Co. All Rights Reserved.</h6>
                         <a href=""><i class="fab fa-facebook-square"></i></a>
                         <a href=""><i class="fab fa-instagram"></i></a>
                         <a href=""><i class="fab fa-twitter"></i></a>
+                        <div class="g-recaptcha" data-sitekey="6LeVKeQfAAAAAKElMrBBgjEGy5jTE4Uur03wOyB8"></div>
                     </div>
                 </div>
             </div>
@@ -452,7 +450,6 @@
                 new WOW().init();
             </script>
         </div>
-
 </body>
 
 </html>
